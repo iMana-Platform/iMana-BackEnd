@@ -15,7 +15,7 @@ public class User implements Serializable {
     @GeneratedValue
     private Integer id;
     // 用户名
-    private String name;
+    private String username;
     // 密码
     private String password;
     // 手机号
@@ -38,12 +38,12 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
