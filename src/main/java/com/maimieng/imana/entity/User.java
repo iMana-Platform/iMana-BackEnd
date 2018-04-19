@@ -1,9 +1,6 @@
 package com.maimieng.imana.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -12,7 +9,7 @@ public class User implements Serializable {
 
     // ID
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     // 用户名
     private String username;
@@ -28,6 +25,11 @@ public class User implements Serializable {
     private String description;
 
     public User() {
+    }
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 
     public Integer getId() {
